@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8466CD50-A961-4315-ABB4-53D2AA4CA7CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\PrintingOffices\PrintingTheDailyOffice.cs" />
+    <Compile Include="Entities\PrintingOffices\ProductStorage.cs" />
+    <Compile Include="Entities\Product\ProductData.cs" />
+    <Compile Include="Entities\Product\NewTimesMagazine.cs" />
+    <Compile Include="Entities\Product\NewTimesNewspaper.cs" />
+    <Compile Include="Entities\PostalOffice\PostalOffice.cs" />
+    <Compile Include="Entities\PrintingOffices\PrintingNewTimesOffice.cs" />
+    <Compile Include="MyException\MyRegException.cs" />
+    <Compile Include="RegEx\RegEx.cs" />
+    <Compile Include="Entities\PostalOffice\Request.cs" />
+    <Compile Include="Entities\PostalOffice\RequestDataBase.cs" />
+    <Compile Include="Entities\Subscriber\Subscriber.cs" />
+    <Compile Include="Entities\Product\TheDailyNewspaper.cs" />
+    <Compile Include="Entities\Product\TheDailyMagazine.cs" />
+    <Compile Include="Interfaces\Product\IProductData.cs" />
+    <Compile Include="Interfaces\PrintingOffices\IStorage.cs" />
+    <Compile Include="Interfaces\PostalOffice\IDataBase.cs" />
+    <Compile Include="Interfaces\Product\IMagazine.cs" />
+    <Compile Include="Interfaces\Product\INewspaper.cs" />
+    <Compile Include="Interfaces\Product\IProduct.cs" />
+    <Compile Include="Interfaces\PostalOffice\IPostalOffice.cs" />
+    <Compile Include="Interfaces\PrintingOffices\IPrintingOffice.cs" />
+    <Compile Include="Interfaces\Subscriber\ISubscriber.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
