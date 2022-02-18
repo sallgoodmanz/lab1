@@ -14,11 +14,6 @@ namespace BLL
 
         public static readonly Regex Surname = new Regex("^[а-яА-ЯіїйЇІЙ]{0,20}$");
 
-        public static readonly Regex HomeAddress = new Regex("^[а-яА-ЯіїйЇІЙ]{0,10}$");
-
         public static readonly Regex EditionNumber = new Regex("[0-9]{3}");
-
-
-
     }
 }

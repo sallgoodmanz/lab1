@@ -31,7 +31,6 @@ namespace PL
             if (!MyRegEx.Surname.IsMatch(inputSurname)) throw new MyRegException("Прізвище");
 
             Console.Write("Домашня адреса: "); string inputHomeAddress = Console.ReadLine();
-            if (!MyRegEx.HomeAddress.IsMatch(inputHomeAddress)) throw new MyRegException("ID");
 
             return new Subscriber(inputName, inputSurname, inputHomeAddress);
         }
@@ -45,7 +44,6 @@ namespace PL
             if (!MyRegEx.Surname.IsMatch(inputSurname)) throw new MyRegException("Прізвище");
 
             Console.Write("Домашня адреса: "); string inputHomeAddress = Console.ReadLine();
-            if (!MyRegEx.HomeAddress.IsMatch(inputHomeAddress)) throw new MyRegException("ID");
 
             var sub = GetSubscriber(inputName, inputSurname, inputHomeAddress);
             if (sub != null)
@@ -196,7 +194,6 @@ namespace PL
                                 if (!MyRegEx.Surname.IsMatch(inputSurname)) throw new MyRegException("Прізвище");
 
                                 Console.Write("Домашня адреса: "); string inputHomeAddress = Console.ReadLine();
-                                if (!MyRegEx.HomeAddress.IsMatch(inputHomeAddress)) throw new MyRegException("ID");
 
                                 if (RemoveSub(GetSubscriber(inputName, inputSurname, inputHomeAddress)))
                                     Console.WriteLine("Видалення пройшло успішно!");

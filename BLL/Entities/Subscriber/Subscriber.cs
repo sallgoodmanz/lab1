@@ -17,7 +17,7 @@ namespace BLL.Entities
         public event EventHandler<IProduct> GotTheProduct;
         private List<IProduct> listOfProducts;
         #endregion
-      
+
         #region properties
         public string Name
         {
@@ -46,14 +46,7 @@ namespace BLL.Entities
         public string HomeAddress
         {
             get { return homeAddress; }
-            set
-            {
-                if (MyRegEx.HomeAddress.IsMatch(value))
-                {
-                    homeAddress = value;
-                }
-                else throw new MyRegException("HomeAddress");
-            }
+            set { homeAddress = value; }
         }
         #endregion
 

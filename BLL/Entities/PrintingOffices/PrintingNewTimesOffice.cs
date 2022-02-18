@@ -23,7 +23,7 @@ namespace BLL.Entities
 
         public void printNewspaper(string name, string edition)
         {
-            storage.MoveToStorage(new NewTimesMagazine(name, edition));
+            storage.MoveToStorage(new NewTimesNewspaper(name, edition));
         }
     }
 }

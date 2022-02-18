@@ -53,12 +53,7 @@ namespace BLL.Entities
                     }
                 }
         }
-
-
-        public List<Request> GetListOfRequests()
-        {
-            return dataBase.GetListOfRequests();
-        }
+        
         public void Subscribe(ISubscriber sub, IProductData product)
         {
             dataBase.AddRequest(new Request(sub, product));
@@ -68,6 +63,9 @@ namespace BLL.Entities
         {
             dataBase.RemoveRequest(request);
         }
-
+        public List<Request> GetListOfRequests()
+        {
+            return dataBase.GetListOfRequests();
+        }
     }
 }
